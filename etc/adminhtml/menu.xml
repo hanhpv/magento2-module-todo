@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="Hans_Todo::todo"
+             title="Hans"
+             module="Hans_Todo"
+             sortOrder="70"
+             resource="Hans_Todo::todo" />
+
+        <add id="Hans_Todo::todo_list"
+             title="Todo List"
+             module="Hans_Todo"
+             sortOrder="10"
+             parent="Hans_Todo::todo"
+             action="todo"
+             resource="Hans_Todo::todo_list" />
+    </menu>
+</config>
