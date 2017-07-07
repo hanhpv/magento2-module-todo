@@ -14,5 +14,28 @@ This module covers most of the aspects of Magento 2 in a sample todo app, which 
 
 # Installation
 The simplest way is to download the source code and copy to the `app/code/Hans` directory.
+### Using composer
+The better way is to use Composer. Add these lines to the `repositories` property of your project `composer.json`
 
+```
+"repositories": [
+    {
+      "type": "vcs",
+      "url": "git@github.com:hanhpv/magento2-module-todo.git",
+      "no-api": true
+    }
+]
+```
+
+and run this command: `composer require hans/module-todo:dev-master`
+
+The module will be disabled by default. We need to tell Magento to enable it. Run these commands from the Magento doc root:
+
+`php bin/magento module:enable Hans_Todo`
+
+`php bin/magento cache:clean`
+
+`php bin/magento setup:upgrade`
+
+You should be all set.
 
